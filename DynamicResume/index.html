@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dynamic Resume Builder</h1>
+
+      <!-- Form Section -->
+      <form id="resume-form">
+        <!-- Personal Information Section -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="sk.akn@example.com"
+            required
+          />
+
+          <label for="phone">Phone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+923157883923"
+            required
+          />
+
+          <label for="linkedin">LinkedIn Profile:</label>
+          <input
+            type="url"
+            id="linkedin"
+            name="linkedin"
+            placeholder="https://www.linkedin.com/in/sk/"
+          />
+        </fieldset>
+
+        <!-- Dynamic Education Section -->
+        <fieldset>
+          <legend>Education</legend>
+          <div id="education-section">
+            <div class="education-entry">
+              <label for="degree">Degree:</label>
+              <input
+                type="text"
+                name="degree"
+                placeholder="Bachelor's in Computer Science"
+                required
+              />
+
+              <label for="institute">Institute:</label>
+              <input
+                type="text"
+                name="institute"
+                placeholder="University Name"
+                required
+              />
+
+              <button type="button" class="remove-btn">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-education-btn">
+            Add More Education
+          </button>
+        </fieldset>
+
+        <!-- Dynamic Work Experience Section -->
+        <fieldset>
+          <legend>Work Experience</legend>
+          <div id="experience-section">
+            <div class="experience-entry">
+              <label for="job-title">Job Title:</label>
+              <input
+                type="text"
+                name="job-title"
+                placeholder="Software Engineer"
+                required
+              />
+
+              <label for="company">Company:</label>
+              <input
+                type="text"
+                name="company"
+                placeholder="TechCorp"
+                required
+              />
+
+              <button type="button" class="remove-btn">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-experience-btn">
+            Add More Experience
+          </button>
+        </fieldset>
+
+        <!-- Dynamic Skills Section -->
+        <fieldset>
+          <legend>Skills</legend>
+          <div id="skills-section">
+            <div class="skills-entry">
+              <label for="skill">Skill:</label>
+              <input
+                type="text"
+                name="skill"
+                placeholder="JavaScript"
+                required
+              />
+
+              <button type="button" class="remove-btn">Remove</button>
+            </div>
+          </div>
+          <button type="button" id="add-skill-btn">Add More Skills</button>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Generate Resume</button>
+      </form>
+
+      <hr class="divider" />
+
+      <!-- Resume Preview Section -->
+      <div id="resume-preview" style="display: none">
+        <h2>Generated Resume</h2>
+
+        <div id="resume">
+          <header>
+            <h1 id="preview-name">Your Name</h1>
+            <p id="preview-email">Email: your.email@example.com</p>
+            <p id="preview-phone">Phone: +1234567890</p>
+            <p>
+              LinkedIn: <span id="preview-linkedin">Your LinkedIn Profile</span>
+            </p>
+          </header>
+
+          <section id="preview-education">
+            <h2>Education</h2>
+            <ul id="education-list"></ul>
+          </section>
+
+          <section id="preview-experience">
+            <h2>Work Experience</h2>
+            <ul id="experience-list"></ul>
+          </section>
+
+          <section id="preview-skills">
+            <h2>Skills</h2>
+            <ul id="skills-list"></ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
