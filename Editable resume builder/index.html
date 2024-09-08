@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Editable Resume Builder</h1>
+      </header>
+
+      <form id="resume-form">
+        <!-- Personal Information Form -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="linkedin">LinkedIn Profile:</label>
+          <input type="url" id="linkedin" name="linkedin" required />
+        </fieldset>
+
+        <!-- Dynamic Sections -->
+        <fieldset id="education-section">
+          <legend>Education</legend>
+          <button type="button" id="add-education-btn">Add Education</button>
+        </fieldset>
+
+        <fieldset id="experience-section">
+          <legend>Work Experience</legend>
+          <button type="button" id="add-experience-btn">
+            Add Work Experience
+          </button>
+        </fieldset>
+
+        <fieldset id="skills-section">
+          <legend>Skills</legend>
+          <button type="button" id="add-skill-btn">Add Skill</button>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <div id="resume-preview" style="display: none">
+        <h2>Resume Preview</h2>
+        <div id="preview-personal-info">
+          <p>
+            <strong>Name:</strong>
+            <span id="preview-name" contenteditable="true"></span>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <span id="preview-email" contenteditable="true"></span>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <span id="preview-phone" contenteditable="true"></span>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <span id="preview-linkedin" contenteditable="true"></span>
+          </p>
+        </div>
+        <h3>Education</h3>
+        <ul id="education-list"></ul>
+        <h3>Work Experience</h3>
+        <ul id="experience-list"></ul>
+        <h3>Skills</h3>
+        <ul id="skills-list"></ul>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
