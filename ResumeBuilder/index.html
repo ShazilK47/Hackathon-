@@ -1,111 +1,58 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Resume</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>John Doe</h1>
-      <p>Contact: johndoe@example.com | +123456789</p>
-      <img src="dp.jpg" alt="Profile Picture" class="profile-pic" />
-    </header>
-
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor of Computer Science, XYZ University (2018 - 2022)</li>
-        <li>High School Diploma, ABC High School (2015 - 2018)</li>
-      </ul>
-    </section>
-
-    <section id="work-experience">
-      <h2>Work Experience</h2>
-      <ul>
-        <li>Software Engineer, TechCorp (2022 - Present)</li>
-        <li>Intern, WebDev Solutions (2021 - 2022)</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>JavaScript, TypeScript, React, Next.js</li>
-        <li>HTML, CSS, Tailwind</li>
-        <li>Node.js, Express, MongoDB</li>
-      </ul>
-    </section>
-
-    <button id="toggle-skills-btn">Toggle Skills</button>
-
-    <script src="js/scripts.js"></script>
-  </body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shazil Khan | Professional Resume</title>
+    <title>ResumeBuilder</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="profile-header">
-          <img src="images/imgid1.jpg" alt="Shazil Khan" class="profile-pic" />
-          <div class="personal-info">
-            <h1>Shazil Khan</h1>
-            <p class="title">Software Engineer</p>
-            <p>shazil.akn@gmail.com | +92 3152248647</p>
-            <p>
-              LinkedIn:
-              <a
-                href="https://www.linkedin.com/in/professional-shazil-khan/"
-                target="_blank"
-                >linkedin.com/in/professional-shazil-khan/</a
-              >
-            </p>
-          </div>
+    <!-- navbar -->
+
+    <nav id="navbar">
+      <div id="logo">
+        <a href="/">Resume Builder</a>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="resume.html">My Resume</a></li>
+          <li><a href="">About</a></li>
+          <li>
+            <a href="dynamic.html"
+              ><span class="create-resume-btn">Build My Resume</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- hero-section -->
+
+    <div id="hero-section">
+      <div id="hero-img">
+        <img src="Resume_CV.jpeg" alt="img" />
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          The Best Online <br />
+          Resume Builder
+        </h1>
+
+        <p class="hero-desc">
+          Now its easy to create the perfect resume for any job using our best
+          resume builder platform
+        </p>
+
+        <div class="btn resume-btn">
+          <a href="dynamic.html">Create Resume Now</a>
         </div>
-      </header>
-
-      <hr class="divider" />
-
-      <section id="education" class="section">
-        <h2>Education</h2>
-        <ul>
-          <li>Computer Science Undergraduate, SMI University (2023 - )</li>
-          <li>Intermediate, Guards Public College</li>
-        </ul>
-      </section>
-
-      <hr class="divider" />
-
-      <section id="work-experience" class="section">
-        <h2>Work Experience</h2>
-        <ul>
-          <li>GIAIC</li>
-          <li>Software Development Intern</li>
-        </ul>
-      </section>
-
-      <hr class="divider" />
-
-      <section id="skills" class="section" style="display: none; opacity: 0">
-        <h2>Skills</h2>
-        <ul>
-          <li>JavaScript, TypeScript, React, Next.js</li>
-          <li>HTML, CSS, Tailwind</li>
-          <li>Node.js, Express, MongoDB</li>
-        </ul>
-      </section>
-
-      <button id="toggle-skills-btn" class="toggle-btn">Show Skills</button>
+      </div>
     </div>
 
-    <script src="js/scripts.js"></script>
+    <!-- features -->
+
+    <!-- footer -->
   </body>
 </html>

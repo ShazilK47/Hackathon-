@@ -1,335 +1,108 @@
-/* styles.css
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+* {
   margin: 0;
+  box-sizing: border-box;
+
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-header {
-  text-align: center;
-  margin: 20px 0;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-section {
-  margin: 20px;
-  width: 90%;
-  max-width: 800px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 1.75rem;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-button {
-  margin: 20px 0;
-  padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  section {
-    width: 100%;
-    margin: 10px;
-  }
-
-  button {
-    width: 100%;
-    padding: 15px;
-  }
-} */
-
-/* styles.css
-body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
+}
+
+#navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
+  justify-content: space-between;
+  background-color: white;
+}
+
+#logo {
+  padding-left: 2rem;
+}
+
+#logo a {
+  text-decoration: none;
+  color: rgba(82, 5, 126, 0.575);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* nav-links */
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.01rem;
+}
+
+/* create-btn */
+.create-resume-btn {
+  border: 1px solid black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  color: rgba(255, 115, 0, 0.918);
+  border-color: rgba(255, 115, 0, 0.918);
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition-duration: 0.3s;
+}
+
+.create-resume-btn:hover {
+  color: white;
+  background-color: rgba(255, 115, 0, 0.918);
+}
+
+/* hero-section */
+
+#hero-section {
+  display: flex;
   height: 100vh;
-}
-
-.container {
-  background: #fff;
-  padding: 40px;
-  max-width: 800px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding: 2rem 5rem;
 }
 
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+#hero-img {
+  height: 25rem;
+  width: 40%;
+  object-fit: cover;
+  margin: 1rem 3rem;
 }
 
-.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 20px;
+#hero-img img {
+  width: 100%;
+  height: auto;
 }
 
-.personal-info {
-  display: flex;
-  flex-direction: column;
+.hero-title {
+  font-weight: 700;
+  font-size: 3rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: #333;
+.hero-desc {
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
-.title {
-  font-size: 1.25rem;
-  color: #777;
+.resume-btn {
+  margin-top: 2rem;
 }
-
-.section {
-  margin-bottom: 30px;
-}
-
-h2 {
+.resume-btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
   font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  font-size: 1.125rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-a {
-  color: #0073b1;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button.toggle-btn {
-  background-color: #0073b1;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto 0;
-}
-
-button.toggle-btn:hover {
-  background-color: #005f8a;
-}
-
-Responsiveness */
-/* @media (max-width: 768px) {
-  .container {
-    padding: 20px;
-  }
-
-  .profile-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-pic {
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: 1.75rem;
-  }
-
-  h2 {
-    font-size: 1.375rem;
-  }
-} */
-
-/* styles.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-.container {
-  background: #fff;
-  padding: 50px;
-  max-width: 850px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  margin-right: 30px;
-  border: 4px solid #005f73;
-}
-
-.personal-info {
-  flex-grow: 1;
-}
-
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.5rem;
-  color: #005f73;
-  margin-bottom: 5px;
-}
-
-.title {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: #828282;
-  margin-bottom: 10px;
-}
-
-hr.divider {
-  border: 0;
-  border-top: 2px solid #e0e0e0;
-  margin: 30px 0;
-}
-
-.section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  font-family: Georgia, serif;
-  font-size: 1.75rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 1.125rem;
-  line-height: 1.8;
-}
-
-ul li {
-  margin-bottom: 10px;
-  color: #555;
-}
-
-a {
-  color: #005f73;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button.toggle-btn {
-  background-color: #005f73;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  display: block;
-  margin: 20px auto 0;
-  transition: background-color 0.3s ease;
-}
-
-button.toggle-btn:hover {
-  background-color: #003f4f;
-}
-
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-  .container {
-    padding: 30px;
-  }
-
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-pic {
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 115, 0, 0.918);
 }

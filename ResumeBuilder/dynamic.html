@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/resumeStyles.css" />
+    <link rel="stylesheet" href="css/dynamic.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Create Your Resume</h1>
+      <form id="resumeForm">
+        <label>Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label>Job Title:</label>
+        <input
+          type="text"
+          id="jobTitle"
+          placeholder="Enter job title (e.g., Creative Director)"
+          required
+        />
+
+        <label>Profile Summary:</label>
+        <textarea
+          id="profile"
+          placeholder="Write a brief profile summary"
+        ></textarea>
+
+        <label>Contact Information:</label>
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="text" id="location" placeholder="City, Country" required />
+        <input type="url" id="website" placeholder="Website (optional)" />
+
+        <label>Education:</label>
+        <div id="educationSection">
+          <div class="education-entry">
+            <input type="text" placeholder="Degree" required />
+            <input type="text" placeholder="University Name" required />
+            <input
+              type="text"
+              placeholder="Year (e.g., 2004 - 2007)"
+              required
+            />
+          </div>
+        </div>
+        <button type="button" onclick="addEducation()">
+          + Add More Education
+        </button>
+
+        <label>Experience:</label>
+        <div id="experienceSection">
+          <div class="experience-entry">
+            <input type="text" placeholder="Job Title" required />
+            <input type="text" placeholder="Company Name" required />
+            <input
+              type="text"
+              placeholder="Years (e.g., 2010 - 2015)"
+              required
+            />
+            <textarea placeholder="Job Description"></textarea>
+          </div>
+        </div>
+        <button type="button" onclick="addExperience()">
+          + Add More Experience
+        </button>
+
+        <label>Skills:</label>
+        <input
+          type="text"
+          id="skills"
+          placeholder="Separate skills by commas (e.g., Team Leadership, Creativity)"
+        />
+
+        <label>Upload Profile Picture:</label>
+        <input type="file" id="profilePic" accept="image/*" />
+
+        <!-- Updated button type and ID -->
+        <button type="button">
+          <a
+            href="inProgress.html
+          "
+          >
+            Create Resume</a
+          >
+        </button>
+      </form>
+    </div>
+
+    <div class="resume-container" id="resumeContainer" style="display: none">
+      <!-- The generated resume will appear here -->
+      <div class="header">
+        <h2 id="resumeName"></h2>
+        <p id="resumeTitle"></p>
+        <img id="resumeImage" src="" alt="Profile Picture" />
+      </div>
+      <section>
+        <h2>Contact</h2>
+        <p id="resumeContact"></p>
+      </section>
+      <section>
+        <h2>Profile</h2>
+        <p id="resumeProfile"></p>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <ul id="resumeEducation"></ul>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <ul id="resumeExperience"></ul>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <p id="resumeSkills"></p>
+      </section>
+      <button onclick="downloadResume()">Download</button>
+      <button onclick="shareResume()">Share</button>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="html2pdf.bundle.min.js"></script>
+  </body>
+</html>
